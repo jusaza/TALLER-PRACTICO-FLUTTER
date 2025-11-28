@@ -60,7 +60,7 @@ class _StudentProfileState extends State<StudentProfile> {
       // 1. Estructura Principal con Scaffold
       appBar: AppBar(
         title: const Text(
-          'Portfolio de Programador',
+          'Portafolio de Programador',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
