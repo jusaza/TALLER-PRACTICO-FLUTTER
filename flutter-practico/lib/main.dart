@@ -60,7 +60,7 @@ class _StudentProfileState extends State<StudentProfile> {
       // 1. Estructura Principal con Scaffold
       appBar: AppBar(
         title: const Text(
-          'Carlos Rodríguez - Dev Portfolio',
+          'Portfolio de Programador',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
@@ -80,7 +80,7 @@ class _StudentProfileState extends State<StudentProfile> {
               child: Stack(
                 children: [
                   Container(
-                    width: 180, // Tamaño personalizado
+                    width: 180, 
                     height: 180,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -98,7 +98,7 @@ class _StudentProfileState extends State<StudentProfile> {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        'assets/profile.jpg', 
+                        'assets/profile.jpg',
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
@@ -113,7 +113,7 @@ class _StudentProfileState extends State<StudentProfile> {
                       ),
                     ),
                   ),
-                  
+
                   // 7. Superposición de Widgets (Stack)
                   Positioned(
                     bottom: 10,
@@ -153,9 +153,9 @@ class _StudentProfileState extends State<StudentProfile> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Carlos Rodríguez', // Nombre único
+                    'Julian David Almanza Sasa',
                     style: TextStyle(
-                      fontSize: 28, // Tamaño de fuente diferente
+                      fontSize: 28,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple.shade800,
                       letterSpacing: 1.2,
@@ -165,10 +165,9 @@ class _StudentProfileState extends State<StudentProfile> {
                   Text(
                     'Desarrollador Flutter & UI/UX Designer\n'
                     'Apasionado por crear aplicaciones móviles innovadoras '
-                    'con interfaces de usuario excepcionales. '
-                    'Especializado en desarrollo cross-platform.',
+                    'con interfaces de usuario excepcionales. ',
                     style: TextStyle(
-                      fontSize: 16, // Tamaño de fuente diferente
+                      fontSize: 16,
                       color: Colors.grey.shade700,
                       height: 1.5,
                     ),
@@ -184,16 +183,16 @@ class _StudentProfileState extends State<StudentProfile> {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center, // Alineación al centro
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
                     onPressed: () {
                       print('🌐 LinkedIn presionado');
                     },
                     icon: Icon(
-                      Icons.linked_camera, // Ícono diferente
+                      Icons.linked_camera,
                       color: Colors.blue.shade700,
-                      size: 32, // Tamaño diferente
+                      size: 32,
                     ),
                   ),
                   const SizedBox(width: 20),
@@ -202,9 +201,9 @@ class _StudentProfileState extends State<StudentProfile> {
                       print('🐙 GitHub presionado');
                     },
                     icon: Icon(
-                      Icons.code, // Ícono diferente
+                      Icons.code,
                       color: Colors.grey.shade800,
-                      size: 36, // Tamaño diferente
+                      size: 36,
                     ),
                   ),
                   const SizedBox(width: 20),
@@ -213,9 +212,9 @@ class _StudentProfileState extends State<StudentProfile> {
                       print('📷 Instagram presionado');
                     },
                     icon: Icon(
-                      Icons.photo_camera, // Ícono diferente
+                      Icons.photo_camera,
                       color: Colors.pink.shade400,
-                      size: 30, // Tamaño diferente
+                      size: 30,
                     ),
                   ),
                 ],
@@ -235,7 +234,7 @@ class _StudentProfileState extends State<StudentProfile> {
             ),
             const SizedBox(height: 12),
             SizedBox(
-              height: 120, // Altura fija para el ListView
+              height: 120,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: skills.length,
@@ -245,7 +244,7 @@ class _StudentProfileState extends State<StudentProfile> {
                     child: ElevatedButton(
                       onPressed: () => _onSkillPressed(skills[index]),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: _getSkillColor(index), // Colores diferentes
+                        backgroundColor: _getSkillColor(index),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
@@ -259,7 +258,7 @@ class _StudentProfileState extends State<StudentProfile> {
                       child: Text(
                         skills[index],
                         style: TextStyle(
-                          fontSize: _getSkillFontSize(index), // Tamaños diferentes
+                          fontSize: _getSkillFontSize(index),
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -285,7 +284,7 @@ class _StudentProfileState extends State<StudentProfile> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, // 3 columnas
+                crossAxisCount: 3,
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
                 childAspectRatio: 0.8,
@@ -307,7 +306,7 @@ class _StudentProfileState extends State<StudentProfile> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.star,
                         size: 40,
                         color: Colors.white,
@@ -335,13 +334,13 @@ class _StudentProfileState extends State<StudentProfile> {
       // 8. Alineación de Texto (Align)
       bottomNavigationBar: Container(
         height: 50,
-        child: const Stack(
+        child: Stack(
           children: [
             Align(
-              alignment: Alignment.bottomRight, // Posición diferente
+              alignment: Alignment.bottomRight,
               child: Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Text(
+                padding: const EdgeInsets.all(12.0),
+                child: const Text(
                   'Versión 1.0',
                   style: TextStyle(
                     color: Colors.grey,
